@@ -1,0 +1,84 @@
+<div class="container mt-5 mb-3 border border-black p-5">
+
+    <p >Here you can Add A product</p>
+    
+    <form [formGroup]="proForm" (submit)="AddProduct($event)" >
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationServer01">Product Name</label>
+            <input formControlName="name" type="text" class="form-control" 
+            [ngClass]="{'is-valid' : nameControl?.valid && nameControl?.touched , 'is-invalid' : !nameControl?.valid  && nameControl?.touched}"
+            id="validationServer01" placeholder="Product Name" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+                please Enter more than 5 letters
+              </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationServer02">Price</label>
+            <input formControlName="price" type="number" class="form-control" 
+            [ngClass]="{'is-valid' : priceControl?.valid &&  priceControl?.touched , 'is-invalid' : !priceControl?.valid &&  priceControl?.touched  }"
+            id="validationServer02" placeholder="Price"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+                please Enter more than 100
+              </div>
+          </div>
+          
+          <div class="col-md-4 mb-3">
+            <label for="validationServer02">Category</label>
+            <input formControlName="category" type="text" class="form-control" 
+            [ngClass]="{'is-valid' : categoryControl?.valid &&  categoryControl?.touched  , 'is-invalid' : !categoryControl?.valid &&  categoryControl?.touched }"
+            id="validationServer02" placeholder="Category"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+                please Enter more than 5 letters
+              </div>
+          </div>
+    
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationServer03">Quantity</label>
+            <input formControlName="quantity" type="number" class="form-control" 
+            [ngClass]="{'is-valid' : quantityControl?.valid &&  quantityControl?.touched , 'is-invalid' : !quantityControl?.valid  &&  quantityControl?.touched }"
+            id="validationServer03" placeholder="Quantity" required>
+            <div class="valid-feedback">
+              good
+            </div>
+            <div class="invalid-feedback">
+                please Enter more than 4
+              </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationServer04">Discount</label>
+            <input formControlName="discount" type="number" class="form-control" 
+            [ngClass]="{'is-valid' : discountControl?.valid  &&  discountControl?.touched , 'is-invalid' : !discountControl?.valid &&  discountControl?.touched }"
+            id="validationServer04" placeholder="Discount" >
+            <div class="valid-feedback">
+              good
+            </div>
+            <div class="invalid-feedback">
+                please Enter number between 5 to 25 
+              </div>
+          </div>
+         
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" formControlName="inSale" id="inSaleCheckbox">
+              <label class="form-check-label" for="inSaleCheckbox">
+                Check if In sale
+              </label>        
+            </div>
+          </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!proForm.valid">Submit form</button>
+      </form>
+    
+    </div>

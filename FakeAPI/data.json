@@ -1,0 +1,59 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "img": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "car",
+      "description": "car blue",
+      "price": 200000,
+      "onSale": true,
+      "discount": 0.05,
+      "quantity": 2
+    },
+    {
+      "id": "2",
+      "name": "car222",
+      "img": "",
+      "description": "car blue",
+      "price": 20000,
+      "onSale": false,
+      "discount": 5,
+      "quantity": 5
+    },
+    {
+      "id": "399c",
+      "name": "phonee",
+      "quantity": 30,
+      "category": "electric",
+      "discount": 5,
+      "price": 2000,
+      "inSale": false
+    }
+  ],
+  "users": [
+    {
+      "name": "Ali",
+      "email": "ali@gmail.com",
+      "password": "123456",
+      "role": "admin",
+      "id": "ef76"
+    },
+    {
+      "name": "Mona",
+      "email": "mona@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "id": "36b5"
+    }
+  ],
+  "categries": [
+    {
+      "name": "Electronics",
+      "id": "d405"
+    },
+    {
+      "name": "Furniture",
+      "id": "2237"
+    }
+  ]
+}
